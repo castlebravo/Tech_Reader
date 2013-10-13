@@ -1,0 +1,174 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D8D8D8"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+    
+	<RelativeLayout 
+	    android:id="@+id/settings_page"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical">
+
+		<EditText
+		    android:id="@+id/filters"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_alignParentRight="true"
+		    android:ems="8"
+		    android:hint="Enter filters here" />
+
+		<Button
+		    android:id="@+id/btn_execute"
+		    style="?android:attr/buttonStyleSmall"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentBottom="true"
+		    android:layout_centerHorizontal="true"
+		    android:text="Retrieve Articles"
+		    android:textSize="12pt" />
+
+		<TextView
+		    android:id="@+id/label1"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignBottom="@+id/checkBox_giz"
+		    android:layout_centerHorizontal="true"
+		    android:layout_marginBottom="37dp"
+		    android:textSize="10pt"
+		    android:text="Retrieve Articles From:" />
+
+		<SeekBar
+		    android:id="@+id/slider"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_above="@+id/btn_execute"
+		    android:layout_centerHorizontal="true"
+		    android:layout_marginBottom="21dp"
+		    android:max="30"
+		    android:progress="5" />
+
+		<Button
+		    android:id="@+id/show_articles"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentRight="true"
+		    android:layout_below="@+id/filters"
+		    android:layout_marginRight="15dp"
+		     android:layout_marginLeft="8dp"
+		    android:layout_marginTop="25dp"
+		    android:layout_toRightOf="@+id/alignment_view"
+		    android:text="Show Hidden Articles"
+		    android:textSize="5pt" />
+
+		<View
+        	android:id="@+id/alignment_view"
+        	android:layout_width="0dp"
+        	android:layout_height="1dp"
+        	android:layout_centerHorizontal="true" />
+		
+		<Button
+		    android:id="@+id/clr_articles"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignBaseline="@+id/show_articles"
+		    android:layout_alignBottom="@+id/show_articles"
+		    android:layout_alignParentLeft="true"
+		    android:layout_toLeftOf="@+id/alignment_view"
+		    android:text="Clear Article List"
+		    android:textSize="5pt"
+		    android:layout_marginLeft="15dp"
+		    android:layout_marginRight="8dp"/>
+
+		<TextView
+		    android:id="@+id/slider_label"
+		    android:paddingLeft="20dp"
+		    android:paddingRight="20dp"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_above="@+id/slider"
+		    android:layout_centerHorizontal="true"
+		    android:textSize="8pt"
+		    android:gravity="center"
+		    android:text="Retrieving 5 articles from the selected sites" />
+
+		<CheckBox
+		    android:id="@+id/checkBox_k"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_above="@+id/slider_label"
+		    android:layout_centerHorizontal="true"
+		    android:layout_marginBottom="46dp"
+		    android:textSize="8pt"
+		    android:text="Kotaku" />
+
+		<CheckBox
+		    android:id="@+id/checkBox_lh"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_above="@+id/checkBox_k"
+		    android:layout_centerHorizontal="true"
+		    android:textSize="8pt"
+		    android:text="Lifehacker" />
+
+		<CheckBox
+		    android:id="@+id/checkBox_giz"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_above="@+id/checkBox_lh"
+		    android:layout_centerHorizontal="true"
+		    android:textSize="8pt"
+		    android:text="Gizmodo" />
+
+    </RelativeLayout>
+    
+	
+	
+    <RelativeLayout
+        android:id="@+id/article_page"
+        android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical"
+	    android:visibility="gone">
+    
+	    <ExpandableListView
+	        android:id="@+id/articleList"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_above="@+id/btn_remove"
+	        android:layout_alignParentLeft="true"
+	        android:groupIndicator="@null"
+	        android:dividerHeight="3dp"
+	        android:divider="@android:color/transparent"
+	        android:childDivider="@android:color/transparent"
+	        android:paddingLeft="3dp"
+	        android:paddingRight="3dp">
+	    </ExpandableListView>
+
+	    <Button
+	        android:id="@+id/btn_remove"
+	        style="?android:attr/buttonStyleSmall"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:layout_alignParentLeft="true"
+	        android:layout_marginBottom="3dp"
+	        android:layout_marginLeft="3dp"
+	        android:text="Hide Article" />
+	    
+	    <Button
+		    android:id="@+id/btn_goto"
+		    style="?android:attr/buttonStyleSmall"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentBottom="true"
+		    android:layout_alignParentRight="true"
+		    android:layout_marginBottom="3dp"
+		    android:layout_marginRight="3dp"
+		    android:text="View Full Article" />
+    
+    </RelativeLayout>
+</LinearLayout>
