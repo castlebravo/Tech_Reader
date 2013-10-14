@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence-diagram version="1.1.4" icons="true" automaticImage="PNG">  
+  <object id="1" language="java" name="com.example.tech_reader.MainActivity" project="Tech Reader" 
+    file="/Tech Reader/src/com/example/tech_reader/MainActivity.java" binary="false" label="mainActivity" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="228" y="0"/>    
+    <execution id="2">      
+      <position height="57" width="115" x="5" y="92"/>    
+    </execution>  
+  </object>  
+  <object id="5" language="java" name="com.example.tech_reader.NetworkTask" project="Tech Reader" 
+    file="/Tech Reader/src/com/example/tech_reader/NetworkTask.java" binary="false" label="networkTask" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="205" y="0"/>    
+    <execution id="4">      
+      <position height="19" width="115" x="124" y="111"/>    
+    </execution>    
+    <execution id="6">      
+      <position height="57" width="115" x="124" y="168"/>    
+    </execution>  
+  </object>  
+  <object id="9" language="java" name="com.example.tech_reader.ParsingTask" project="Tech Reader" 
+    file="/Tech Reader/src/com/example/tech_reader/ParsingTask.java" binary="false" label="parsingTask" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="383" y="0"/>    
+    <execution id="8">      
+      <position height="19" width="115" x="243" y="187"/>    
+    </execution>    
+    <execution id="10">      
+      <position height="57" width="115" x="243" y="118"/>    
+    </execution>  
+  </object>  
+  <object id="13" language="java" name="com.example.tech_reader.Article" project="Tech Reader" 
+    file="/Tech Reader/src/com/example/tech_reader/Article.java" binary="false" label="article" type="class" 
+    autoSize="true">    
+    <position height="-1" width="-1" x="440" y="0"/>    
+    <execution id="12">      
+      <position height="19" width="115" x="362" y="137"/>    
+    </execution>    
+    <execution id="14">      
+      <position height="57" width="115" x="362" y="260"/>    
+    </execution>  
+  </object>  
+  <object id="17" language="java" name="com.example.tech_reader.ArticleCollapsed" project="Tech Reader" 
+    file="/Tech Reader/src/com/example/tech_reader/ArticleCollapsed.java" binary="false" label="articleCollapsed" 
+    type="class" autoSize="true">    
+    <position height="-1" width="-1" x="526" y="0"/>    
+    <execution id="18">      
+      <position height="19" width="7" x="537" y="180"/>    
+    </execution>    
+    <execution id="19">      
+      <position height="19" width="118" x="481" y="346"/>    
+    </execution>  
+  </object>  
+  <object id="20" language="java" name="com.example.tech_reader.ArticleExpanded" project="Tech Reader" 
+    file="/Tech Reader/src/com/example/tech_reader/ArticleExpanded.java" binary="false" label="articleExpanded" 
+    type="class" autoSize="true">    
+    <position height="-1" width="-1" x="635" y="0"/>    
+    <execution id="21">      
+      <position height="57" width="118" x="603" y="161"/>    
+    </execution>  
+  </object>  
+  <object id="23" language="java" name="com.example.tech_reader.ArticleListAdapter" project="Tech Reader" 
+    file="/Tech Reader/src/com/example/tech_reader/ArticleListAdapter.java" binary="false" label="articleListAdapter" 
+    type="class" autoSize="true">    
+    <position height="-1" width="-1" x="786" y="0"/>    
+    <execution id="16">      
+      <position height="19" width="128" x="725" y="279"/>    
+    </execution>    
+    <execution id="24">      
+      <position height="57" width="128" x="725" y="327"/>    
+    </execution>  
+  </object>  
+  <message id="3" operation="NetworkTask()">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
+  </message>  
+  <message id="7" operation="ParsingTask(String)">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="8"/>  
+  </message>  
+  <message id="11" operation="Article(String,String,String,String,String)">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="12"/>  
+  </message>  
+  <message id="15" operation="addArticle(com.example.tech_reader.Article):void">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="16"/>  
+  </message>  
+  <message id="22" operation="setExpandedArticle(com.example.tech_reader.ArticleExpanded):void">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="18"/>  
+  </message>  
+  <message id="25" operation="ArticleCollapsed()">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="19"/>  
+  </message>
+</sequence-diagram>
